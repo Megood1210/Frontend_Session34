@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        width: 80%;
+        margin: auto;
+    }
+    table {
+        width: 100%;
+        margin-top: 20px;
+    }
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    button {
+        margin-right: 5px;
+        background-color: blue;
+        color: white;
+        border-radius: 5px;
+        border: none;
+        height: 35px;
+    }
+    input{
+        border-radius: 5px;
+        height: 22px;
+        border: 1px solid gray;
+        margin-right: 10px;
+        padding: 5px;
+    }
+    select{
+        border-radius: 5px;
+        height: 35px;
+        border: 1px solid gray;
+        margin-right: 10px;
+        padding: 5px;
+    }
+</style>
+<body>
+    <div class="container">
+        <h2 style="text-align: center;">Task Management</h2>
+        <br>
+        <input type="text" id="content" placeholder="Content">
+        <input type="date" id="dueDate">
+        <select id="status">
+            <option value="Choose status"> Choose status</option>
+            <option value="Pending">Pending</option>
+            <option value="Completed">Completed</option>
+        </select>
+        <input type="text" id="assignedTo" placeholder="Username">
+        <button onclick="submitTask()">Submit</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Content</th>
+                    <th>Due Date</th>
+                    <th>Status</th>
+                    <th>Assigned to</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="taskTableBody"></tbody>
+        </table>
+        <input type="hidden" id="taskId">
+    </div>
+    <script src="./ss34ex2.js"></script>
+</body>
+</html>
